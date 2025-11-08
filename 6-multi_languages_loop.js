@@ -1,7 +1,9 @@
-const x = ["C is fun", "Python is cool", "JavaScript is amazing"];
-
-let out = "";
-for (let i = 0; i < x.length; i++) {
-    out += x[i] + "\n";
+const languages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+let i = 0;
+let out = '';
+while (i < languages.length) {
+    out += languages[i] + '\n';
+    i++;
 }
-console.log(out.trim());
+out = out.slice(0, -1);
+console.log(out);
