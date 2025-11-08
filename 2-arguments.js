@@ -1,6 +1,12 @@
 const { argv } = require('node:process');
 
-// print process.argv
-argv.forEach((val, index) => {
-  console.log(`${index}: ${val}`);
-});
+// Count only user-supplied arguments (ignore node executable and script path)
+const userArgs = argv.slice(2);
+
+if (userArgs.length === 0) {
+  console.log("No argument");
+} else if (userArgs.length === 1) {
+  console.log("Argument found");
+} else {
+  console.log("Arguments found");
+}
